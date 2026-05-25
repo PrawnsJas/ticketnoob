@@ -1,4 +1,4 @@
-# TicketRush Trainer 🎫
+# TickeNoob 🎫
 
 A realistic concert ticket buying simulator for training high-pressure purchasing flows. Practice queue management, seat selection, and checkout speed before real ticket sales.
 
