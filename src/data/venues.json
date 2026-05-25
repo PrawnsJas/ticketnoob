@@ -1,0 +1,192 @@
+{
+  "venue_001": {
+    "name": "Manila Arena",
+    "totalSeats": 10000,
+    "sections": [
+      {
+        "id": "vip",
+        "name": "VIP Standing",
+        "seats": 500,
+        "tier": "vip",
+        "color": "#FF006E",
+        "positions": { "x": 50, "y": 30, "width": 20, "height": 40 }
+      },
+      {
+        "id": "lower-box",
+        "name": "Lower Box",
+        "seats": 2000,
+        "tier": "lower",
+        "color": "#B500D9",
+        "positions": { "x": 20, "y": 10, "width": 60, "height": 30 }
+      },
+      {
+        "id": "upper-box",
+        "name": "Upper Box",
+        "seats": 4000,
+        "tier": "upper",
+        "color": "#00D9FF",
+        "positions": { "x": 15, "y": 45, "width": 70, "height": 35 }
+      },
+      {
+        "id": "gen-ad",
+        "name": "General Admission",
+        "seats": 3500,
+        "tier": "gen",
+        "color": "#FFD60A",
+        "positions": { "x": 30, "y": 72, "width": 40, "height": 20 }
+      }
+    ]
+  },
+  "venue_002": {
+    "name": "Smart Araneta Coliseum",
+    "totalSeats": 16000,
+    "sections": [
+      {
+        "id": "vip",
+        "name": "VIP Standing",
+        "seats": 800,
+        "tier": "vip",
+        "color": "#FF006E",
+        "positions": { "x": 45, "y": 25, "width": 25, "height": 50 }
+      },
+      {
+        "id": "lower-box",
+        "name": "Lower Box",
+        "seats": 4000,
+        "tier": "lower",
+        "color": "#B500D9",
+        "positions": { "x": 15, "y": 10, "width": 70, "height": 25 }
+      },
+      {
+        "id": "upper-box",
+        "name": "Upper Box",
+        "seats": 6000,
+        "tier": "upper",
+        "color": "#00D9FF",
+        "positions": { "x": 10, "y": 40, "width": 80, "height": 30 }
+      },
+      {
+        "id": "gen-ad",
+        "name": "General Admission",
+        "seats": 5200,
+        "tier": "gen",
+        "color": "#FFD60A",
+        "positions": { "x": 20, "y": 75, "width": 60, "height": 20 }
+      }
+    ]
+  },
+  "venue_003": {
+    "name": "MOA Arena",
+    "totalSeats": 8000,
+    "sections": [
+      {
+        "id": "vip",
+        "name": "VIP Standing",
+        "seats": 400,
+        "tier": "vip",
+        "color": "#FF006E",
+        "positions": { "x": 50, "y": 35, "width": 15, "height": 30 }
+      },
+      {
+        "id": "lower-box",
+        "name": "Lower Box",
+        "seats": 2000,
+        "tier": "lower",
+        "color": "#B500D9",
+        "positions": { "x": 25, "y": 15, "width": 50, "height": 25 }
+      },
+      {
+        "id": "upper-box",
+        "name": "Upper Box",
+        "seats": 3000,
+        "tier": "upper",
+        "color": "#00D9FF",
+        "positions": { "x": 20, "y": 45, "width": 60, "height": 30 }
+      },
+      {
+        "id": "gen-ad",
+        "name": "General Admission",
+        "seats": 2600,
+        "tier": "gen",
+        "color": "#FFD60A",
+        "positions": { "x": 35, "y": 70, "width": 30, "height": 25 }
+      }
+    ]
+  },
+  "venue_004": {
+    "name": "Filoil Flying V Arena",
+    "totalSeats": 5000,
+    "sections": [
+      {
+        "id": "vip",
+        "name": "VIP Standing",
+        "seats": 250,
+        "tier": "vip",
+        "color": "#FF006E",
+        "positions": { "x": 48, "y": 38, "width": 12, "height": 24 }
+      },
+      {
+        "id": "lower-box",
+        "name": "Lower Box",
+        "seats": 1200,
+        "tier": "lower",
+        "color": "#B500D9",
+        "positions": { "x": 28, "y": 18, "width": 44, "height": 22 }
+      },
+      {
+        "id": "upper-box",
+        "name": "Upper Box",
+        "seats": 2000,
+        "tier": "upper",
+        "color": "#00D9FF",
+        "positions": { "x": 22, "y": 48, "width": 56, "height": 28 }
+      },
+      {
+        "id": "gen-ad",
+        "name": "General Admission",
+        "seats": 1550,
+        "tier": "gen",
+        "color": "#FFD60A",
+        "positions": { "x": 38, "y": 72, "width": 24, "height": 22 }
+      }
+    ]
+  },
+  "venue_005": {
+    "name": "Philippine Arena",
+    "totalSeats": 55000,
+    "sections": [
+      {
+        "id": "vip",
+        "name": "VIP Standing",
+        "seats": 3000,
+        "tier": "vip",
+        "color": "#FF006E",
+        "positions": { "x": 40, "y": 25, "width": 35, "height": 50 }
+      },
+      {
+        "id": "lower-box",
+        "name": "Lower Box",
+        "seats": 12000,
+        "tier": "lower",
+        "color": "#B500D9",
+        "positions": { "x": 12, "y": 8, "width": 76, "height": 20 }
+      },
+      {
+        "id": "upper-box",
+        "name": "Upper Box",
+        "seats": 20000,
+        "tier": "upper",
+        "color": "#00D9FF",
+        "positions": { "x": 8, "y": 32, "width": 84, "height": 35 }
+      },
+      {
+        "id": "gen-ad",
+        "name": "General Admission",
+        "seats": 20000,
+        "tier": "gen",
+        "color": "#FFD60A",
+        "positions": { "x": 18, "y": 72, "width": 64, "height": 24 }
+      }
+    ]
+  }
+}

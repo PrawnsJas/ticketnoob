@@ -1,0 +1,66 @@
+{
+  "modes": [
+    {
+      "id": "easy",
+      "name": "Easy Mode",
+      "description": "Perfect for beginners. Generous timers, no random crashes.",
+      "queueTimeMultiplier": 0.5,
+      "cartExpireSeconds": 600,
+      "stressEventFrequency": 0,
+      "crashProbability": 0,
+      "seatDisappearRate": 0.01
+    },
+    {
+      "id": "sale-day",
+      "name": "Sale Day",
+      "description": "Standard difficulty. Real-world ticket rush experience.",
+      "queueTimeMultiplier": 1,
+      "cartExpireSeconds": 300,
+      "stressEventFrequency": 0.3,
+      "crashProbability": 0.1,
+      "seatDisappearRate": 0.05
+    },
+    {
+      "id": "bts-chaos",
+      "name": "BTS-Level Chaos",
+      "description": "Extreme difficulty. High-pressure, aggressive timeouts, frequent disconnects.",
+      "queueTimeMultiplier": 2,
+      "cartExpireSeconds": 120,
+      "stressEventFrequency": 0.7,
+      "crashProbability": 0.4,
+      "seatDisappearRate": 0.2
+    }
+  ],
+  "stressEvents": [
+    {
+      "id": "high-traffic",
+      "message": "⚠️ High traffic detected - Queue paused temporarily",
+      "duration": 3000
+    },
+    {
+      "id": "reconnecting",
+      "message": "🔄 Reconnecting...",
+      "duration": 2000
+    },
+    {
+      "id": "inventory-refresh",
+      "message": "📦 Inventory refresh in progress",
+      "duration": 2500
+    },
+    {
+      "id": "connection-lost",
+      "message": "❌ Connection interrupted - Attempting to reconnect",
+      "duration": 3500
+    },
+    {
+      "id": "server-busy",
+      "message": "😰 Server busy - Please wait",
+      "duration": 2000
+    },
+    {
+      "id": "queue-reorder",
+      "message": "🔀 Queue reordering due to traffic spike",
+      "duration": 4000
+    }
+  ]
+}

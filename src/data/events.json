@@ -1,0 +1,87 @@
+[
+  {
+    "id": "evt_001",
+    "artist": "LUNA ECLIPSE",
+    "date": "2026-06-15",
+    "venue": "Manila Arena",
+    "venueId": "venue_001",
+    "totalCapacity": 10000,
+    "currentSoldOut": false,
+    "saleOpenTime": "2026-06-10T12:00:00Z",
+    "imageUrl": "/images/luna-eclipse.jpg",
+    "tiers": [
+      { "id": "vip", "name": "VIP Standing", "price": 5999, "available": 245, "total": 500 },
+      { "id": "lower", "name": "Lower Box", "price": 3999, "available": 1200, "total": 2000 },
+      { "id": "upper", "name": "Upper Box", "price": 2499, "available": 3000, "total": 4000 },
+      { "id": "gen", "name": "General Admission", "price": 999, "available": 500, "total": 3500 }
+    ]
+  },
+  {
+    "id": "evt_002",
+    "artist": "NEON DYNASTY",
+    "date": "2026-07-08",
+    "venue": "Smart Araneta Coliseum",
+    "venueId": "venue_002",
+    "totalCapacity": 16000,
+    "currentSoldOut": true,
+    "saleOpenTime": "2026-07-01T10:00:00Z",
+    "imageUrl": "/images/neon-dynasty.jpg",
+    "tiers": [
+      { "id": "vip", "name": "VIP Standing", "price": 7999, "available": 0, "total": 800 },
+      { "id": "lower", "name": "Lower Box", "price": 4999, "available": 0, "total": 4000 },
+      { "id": "upper", "name": "Upper Box", "price": 2999, "available": 0, "total": 6000 },
+      { "id": "gen", "name": "General Admission", "price": 1299, "available": 0, "total": 5200 }
+    ]
+  },
+  {
+    "id": "evt_003",
+    "artist": "CELESTIAL VIBE",
+    "date": "2026-07-22",
+    "venue": "MOA Arena",
+    "venueId": "venue_003",
+    "totalCapacity": 8000,
+    "currentSoldOut": false,
+    "saleOpenTime": "2026-07-15T14:00:00Z",
+    "imageUrl": "/images/celestial-vibe.jpg",
+    "tiers": [
+      { "id": "vip", "name": "VIP Standing", "price": 4999, "available": 320, "total": 400 },
+      { "id": "lower", "name": "Lower Box", "price": 3299, "available": 1500, "total": 2000 },
+      { "id": "upper", "name": "Upper Box", "price": 1999, "available": 2200, "total": 3000 },
+      { "id": "gen", "name": "General Admission", "price": 799, "available": 700, "total": 2600 }
+    ]
+  },
+  {
+    "id": "evt_004",
+    "artist": "CHROME HEARTS",
+    "date": "2026-08-05",
+    "venue": "Filoil Flying V Arena",
+    "venueId": "venue_004",
+    "totalCapacity": 5000,
+    "currentSoldOut": false,
+    "saleOpenTime": "2026-07-29T11:00:00Z",
+    "imageUrl": "/images/chrome-hearts.jpg",
+    "tiers": [
+      { "id": "vip", "name": "VIP Standing", "price": 3999, "available": 180, "total": 250 },
+      { "id": "lower", "name": "Lower Box", "price": 2499, "available": 800, "total": 1200 },
+      { "id": "upper", "name": "Upper Box", "price": 1599, "available": 1500, "total": 2000 },
+      { "id": "gen", "name": "General Admission", "price": 699, "available": 600, "total": 1550 }
+    ]
+  },
+  {
+    "id": "evt_005",
+    "artist": "STARLIGHT COLLECTIVE",
+    "date": "2026-08-20",
+    "venue": "Philippine Arena",
+    "venueId": "venue_005",
+    "totalCapacity": 55000,
+    "currentSoldOut": false,
+    "saleOpenTime": "2026-08-06T09:00:00Z",
+    "imageUrl": "/images/starlight.jpg",
+    "tiers": [
+      { "id": "vip", "name": "VIP Standing", "price": 12999, "available": 2000, "total": 3000 },
+      { "id": "lower", "name": "Lower Box", "price": 7999, "available": 8000, "total": 12000 },
+      { "id": "upper", "name": "Upper Box", "price": 4999, "available": 15000, "total": 20000 },
+      { "id": "gen", "name": "General Admission", "price": 1999, "available": 8000, "total": 20000 }
+    ]
+  }
+]

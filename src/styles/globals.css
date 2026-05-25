@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0f 0%, #1a0a2e 100%);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  min-height: 100vh;
+}
+
+:root {
+  --neon-pink: #FF006E;
+  --neon-cyan: #00D9FF;
+  --neon-purple: #B500D9;
+  --neon-lime: #00FF00;
+  --neon-yellow: #FFD60A;
+}
+
+@layer components {
+  .neon-border {
+    @apply border-2 border-[#FF006E];
+  }
+
+  .neon-shadow {
+    @apply shadow-[0_0_20px_rgba(255,0,110,0.5)];
+  }
+
+  .neon-glow {
+    @apply text-[#FF006E] drop-shadow-[0_0_10px_#FF006E];
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-gradient-to-r from-[#FF006E] to-[#B500D9] text-white font-bold rounded-lg hover:shadow-lg hover:neon-shadow transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-2 bg-transparent border-2 border-[#00D9FF] text-[#00D9FF] font-bold rounded-lg hover:bg-[#00D9FF] hover:text-[#0a0a0f] transition-all duration-300;
+  }
+
+  .container-dark {
+    @apply bg-gradient-to-br from-[#1a1a2e] to-[#16213e] rounded-xl p-6;
+  }
+
+  .text-neon-pink {
+    @apply text-[#FF006E];
+  }
+
+  .text-neon-cyan {
+    @apply text-[#00D9FF];
+  }
+
+  .text-neon-yellow {
+    @apply text-[#FFD60A];
+  }
+}
+
+/* Loading skeleton animation */
+@keyframes skeleton-loading {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+.skeleton {
+  animation: skeleton-loading 1s infinite;
+  background: linear-gradient(
+    90deg,
+    #1a1a2e 0%,
+    #2a2a4e 50%,
+    #1a1a2e 100%
+  );
+  background-size: 200% 100%;
+}
+
+/* Pulse animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 0, 110, 0.5);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 40px rgba(255, 0, 110, 0.8);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Confetti animation */
+@keyframes confetti-fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  animation: confetti-fall 3s ease-out forwards;
+}
