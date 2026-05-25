@@ -5,7 +5,7 @@ import { Footer } from '../components/layout/Footer'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'TicketRush Trainer',
+  title: 'TicketNoob',
   description: 'Master high-pressure ticket buying simulation',
 }
 
