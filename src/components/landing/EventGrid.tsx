@@ -1,6 +1,6 @@
 'use client'
 
-import { Event } from '@/types'
+import { Event } from '../../types'
 import { EventCard } from './EventCard'
 import { motion } from 'framer-motion'
 

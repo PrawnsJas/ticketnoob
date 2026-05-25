@@ -3,13 +3,13 @@
 import { useState, useEffect } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Seat } from '@/types'
-import { SeatMap } from '@/components/seats/SeatMap'
-import { SelectedSeatsPanel } from '@/components/seats/SelectedSeatsPanel'
-import { CountdownTimer } from '@/components/common/CountdownTimer'
-import { useEventStore } from '@/stores/eventStore'
-import { useCartStore } from '@/stores/cartStore'
-import eventsData from '@/data/events.json'
+import { Seat } from '../../../../types'
+import { SeatMap } from '../../../../components/seats/SeatMap'
+import { SelectedSeatsPanel } from '../../../../components/seats/SelectedSeatsPanel'
+import { CountdownTimer } from '../../../../components/common/CountdownTimer'
+import { useEventStore } from '../../../../stores/eventStore'
+import { useCartStore } from '../../../../stores/cartStore'
+import eventsData from '../../../../data/events.json'
 
 export default function SeatsPage() {
   const params = useParams()

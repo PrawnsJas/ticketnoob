@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { useQueueStore } from '@/stores/queueStore'
-import { simulateQueueProgress, shouldTriggerStressEvent, getRandomStressEvent } from '@/lib/queueAlgorithm'
+import { useQueueStore } from '../stores/queueStore'
+import { simulateQueueProgress, shouldTriggerStressEvent, getRandomStressEvent } from '../lib/queueAlgorithm'
 
 export function useQueue(difficulty: string) {
   const { position, setPosition } = useQueueStore()

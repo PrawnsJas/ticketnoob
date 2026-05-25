@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { Order } from '@/types'
+import { Order } from '../types'
 
 interface CheckoutStoreState {
   paymentMethod: string | null

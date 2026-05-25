@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { QueuePosition } from '@/types'
+import { QueuePosition } from '../types'
 
 interface QueueStoreState {
   position: QueuePosition | null

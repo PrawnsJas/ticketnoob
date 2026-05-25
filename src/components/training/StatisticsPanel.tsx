@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { TrainingStats } from '@/types'
-import { formatTime } from '@/lib/utils'
+import { TrainingStats } from '../../types'
+import { formatTime } from '../../lib/utils'
 
 interface StatisticsPanelProps {
   stats: TrainingStats

@@ -1,4 +1,4 @@
-import { DifficultyMode } from '@/types'
+import { DifficultyMode } from '../types'
 
 export function formatPrice(price: number): string {
   return new Intl.NumberFormat('en-PH', {

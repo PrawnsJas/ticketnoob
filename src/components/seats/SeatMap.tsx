@@ -2,9 +2,9 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { Seat, TicketTier } from '@/types'
-import { useSeatMap } from '@/hooks/useSeatMap'
-import venuesData from '@/data/venues.json'
+import { Seat, TicketTier } from '../../types'
+import { useSeatMap } from '../../hooks/useSeatMap'
+import venuesData from '../../data/venues.json'
 
 interface SeatMapProps {
   venueId: string
@@ -57,13 +57,13 @@ export function SeatMap({ venueId, tier, difficulty, maxSeats, onSeatsSelected }
       <div className="p-4 bg-[#0a0a0f] rounded-lg overflow-x-auto">
         <div className="inline-block">
           <div className="text-center text-sm text-gray-400 mb-4 font-bold">🎭 STAGE 🎭</div>
-          {Object.entries(groupedByRow)
+          {(Object.entries(groupedByRow) as [string, Seat[]][])
             .sort()
             .map(([row, rowSeats]) => (
               <div key={row} className="flex items-center gap-2 mb-2">
                 <span className="w-6 text-right text-xs text-gray-500">{row}</span>
                 <div className="flex gap-1">
-                  {rowSeats.map((seat) => (
+                  {rowSeats.map((seat: Seat) => (
                     <motion.button
                       key={seat.id}
                       whileHover={seat.status !== 'sold' ? { scale: 1.2 } : {}}

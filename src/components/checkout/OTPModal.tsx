@@ -2,14 +2,15 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { Modal } from '@/components/common/Modal'
+import { Modal } from '../common/Modal'
 
 interface OTPModalProps {
   isOpen: boolean
   onConfirm: (otp: string) => void
+  onClose: () => void
 }
 
-export function OTPModal({ isOpen, onConfirm }: OTPModalProps) {
+export function OTPModal({ isOpen, onConfirm, onClose }: OTPModalProps) {
   const [otp, setOtp] = useState('')
   const [fakeOtp] = useState(Math.random().toString().slice(2, 8))
 
@@ -21,7 +22,7 @@ export function OTPModal({ isOpen, onConfirm }: OTPModalProps) {
   }
 
   return (
-    <Modal isOpen={isOpen} title="OTP Verification" size="md">
+    <Modal isOpen={isOpen} title="OTP Verification" size="md" onClose={onClose}>
       <div className="space-y-4">
         <p className="text-gray-300 text-center">Enter the OTP sent to your registered mobile number</p>
 

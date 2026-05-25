@@ -3,9 +3,9 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
-import { DifficultySelector } from '@/components/training/DifficultySelector'
-import { DifficultyMode } from '@/types'
-import { useTrainingStore } from '@/stores/trainingStore'
+import { DifficultySelector } from '../../components/training/DifficultySelector'
+import { DifficultyMode } from '../../types'
+import { useTrainingStore } from '../../stores/trainingStore'
 
 export default function TrainingModesPage() {
   const [selected, setSelected] = useState<DifficultyMode | null>(null)

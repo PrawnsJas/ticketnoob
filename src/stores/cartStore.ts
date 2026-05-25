@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { TicketTier } from '@/types'
+import { TicketTier } from '../types'
 
 interface CartItem {
   id: string

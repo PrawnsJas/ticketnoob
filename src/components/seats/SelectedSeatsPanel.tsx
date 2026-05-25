@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Seat, TicketTier } from '@/types'
-import { formatPrice } from '@/lib/utils'
+import { Seat, TicketTier } from '../../types'
+import { formatPrice } from '../../lib/utils'
 
 interface SelectedSeatsPanelProps {
   seats: Seat[]

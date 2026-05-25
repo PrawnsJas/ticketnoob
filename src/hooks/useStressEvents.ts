@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { shouldTriggerStressEvent, getRandomStressEvent } from '@/lib/queueAlgorithm'
+import { shouldTriggerStressEvent, getRandomStressEvent } from '../lib/queueAlgorithm'
 
 export function useStressEvents(difficulty: string, enabled: boolean = true) {
   const [currentEvent, setCurrentEvent] = useState<any>(null)

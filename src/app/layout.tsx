@@ -1,7 +1,8 @@
 import type { Metadata } from 'next'
-import { Header } from '@/components/layout/Header'
-import { Footer } from '@/components/layout/Footer'
-import '@/styles/globals.css'
+import { Header } from '../components/layout/Header'
+import { Footer } from '../components/layout/Footer'
+// @ts-ignore: CSS side-effect import declaration
+import '../styles/globals.css'
 
 export const metadata: Metadata = {
   title: 'TicketRush Trainer',

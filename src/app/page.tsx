@@ -1,17 +1,17 @@
 'use client'
 
-import { HeroSection } from '@/components/landing/HeroSection'
-import { AnimatedBackground } from '@/components/landing/AnimatedBackground'
-import { EventGrid } from '@/components/landing/EventGrid'
+import { HeroSection } from '../components/landing/HeroSection'
+import { AnimatedBackground } from '../components/landing/AnimatedBackground'
+import { EventGrid } from '../components/landing/EventGrid'
 import { useEffect, useState } from 'react'
-import { Event } from '@/types'
-import eventsData from '@/data/events.json'
+import { Event } from '../types'
+import eventsData from '../data/events.json'
 
 export default function Home() {
   const [events, setEvents] = useState<Event[]>([])
 
   useEffect(() => {
-    setEvents(eventsData)
+    setEvents(eventsData as Event[])
   }, [])
 
   return (

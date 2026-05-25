@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { QueuePosition } from '@/types'
+import { QueuePosition } from '../../types'
 
 interface QueueProgressBarProps {
   position: QueuePosition

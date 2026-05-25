@@ -3,15 +3,45 @@
 import { useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { CartSummary } from '@/components/checkout/CartSummary'
-import { PaymentMethods } from '@/components/checkout/PaymentMethods'
-import { OTPModal } from '@/components/checkout/OTPModal'
-import { useEventStore } from '@/stores/eventStore'
-import { useCartStore } from '@/stores/cartStore'
-import { useCheckoutStore } from '@/stores/checkoutStore'
-import { useQueueStore } from '@/stores/queueStore'
-import { generateOrderNumber } from '@/lib/utils'
-import eventsData from '@/data/events.json'
+import { PaymentMethods } from '../../../../components/checkout/PaymentMethods'
+import { OTPModal } from '../../../../components/checkout/OTPModal'
+import { useEventStore } from '../../../../stores/eventStore'
+
+type CartSummaryProps = {
+  seats: { section: string; row: string; seatNumber: number }[]
+  tier: string
+  tierPrice: number
+}
+
+function CartSummary({ seats, tier, tierPrice }: CartSummaryProps) {
+  return (
+    <section className="bg-slate-900 rounded-xl p-6">
+      <h2 className="text-2xl font-bold mb-4">Order Summary</h2>
+      <p className="text-gray-300 mb-4">
+        {tier} tier • {seats.length} seat{seats.length === 1 ? '' : 's'}
+      </p>
+      <div className="space-y-3">
+        {seats.map((seat) => (
+          <div key={`${seat.section}-${seat.row}-${seat.seatNumber}`} className="flex justify-between">
+            <span className="text-sm text-gray-200">
+              {seat.section.toUpperCase()}-{seat.row}{seat.seatNumber}
+            </span>
+            <span className="text-sm text-gray-200">${tierPrice.toFixed(2)}</span>
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 border-t border-slate-700 pt-4 flex justify-between text-lg font-semibold">
+        <span>Total</span>
+        <span>${(seats.length * tierPrice).toFixed(2)}</span>
+      </div>
+    </section>
+  )
+}
+import { useCartStore } from '../../../../stores/cartStore'
+import { useCheckoutStore } from '../../../../stores/checkoutStore'
+import { useQueueStore } from '../../../../stores/queueStore'
+import { generateOrderNumber } from '../../../../lib/utils'
+import eventsData from '../../../../data/events.json'
 
 export default function CheckoutPage() {
   const params = useParams()
@@ -88,7 +118,7 @@ export default function CheckoutPage() {
         </div>
       </div>
 
-      <OTPModal isOpen={showOTP} onConfirm={handleOTPConfirm} />
+      <OTPModal isOpen={showOTP} onConfirm={handleOTPConfirm} onClose={() => setShowOTP(false)} />
     </div>
   )
 }

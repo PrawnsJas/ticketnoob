@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
-import { QueuePosition } from '@/types'
-import { generateQueuePosition } from '@/lib/queueAlgorithm'
-import { useQueue } from '@/hooks/useQueue'
+import { QueuePosition } from '../../types'
+import { generateQueuePosition } from '../../lib/queueAlgorithm'
+import { useQueue } from '../../hooks/useQueue'
 import { QueueProgressBar } from './QueueProgressBar'
 import { StressEventNotification } from './StressEventNotification'
 

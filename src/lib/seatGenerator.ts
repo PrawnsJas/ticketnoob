@@ -1,5 +1,5 @@
-import { Seat, TicketTier } from '@/types'
-import venuesData from '@/data/venues.json'
+import { Seat, TicketTier } from '../types'
+import venuesData from '../data/venues.json'
 
 export function generateSeatsForVenue(venueId: string, tier: TicketTier): Seat[] {
   const venue = venuesData[venueId as keyof typeof venuesData]

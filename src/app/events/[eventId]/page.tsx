@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
-import { Event, TicketTier } from '@/types'
-import { formatPrice, formatDate } from '@/lib/utils'
-import { useEventStore } from '@/stores/eventStore'
-import eventsData from '@/data/events.json'
+import { Event, TicketTier } from '../../../types'
+import { formatPrice, formatDate } from '../../../lib/utils'
+import { useEventStore } from '../../../stores/eventStore'
+import eventsData from '../../../data/events.json'
 
 export default function EventDetailPage() {
   const params = useParams()
@@ -19,8 +19,16 @@ export default function EventDetailPage() {
   useEffect(() => {
     const found = eventsData.find((e) => e.id === eventId)
     if (found) {
-      setEvent(found)
-      setSelectedEvent(found)
+      const normalizedEvent = {
+        ...found,
+        tiers: found.tiers.map((tier) => ({
+          ...tier,
+          id: tier.id as TicketTier,
+        })),
+      } as Event
+
+      setEvent(normalizedEvent)
+      setSelectedEvent(normalizedEvent)
     }
   }, [eventId, setSelectedEvent])
 

@@ -4,21 +4,19 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { StatisticsPanel } from '@/components/training/StatisticsPanel'
-import { useCheckoutStore } from '@/stores/checkoutStore'
-import { useEventStore } from '@/stores/eventStore'
-import { useQueueStore } from '@/stores/queueStore'
-import { useCartStore } from '@/stores/cartStore'
-import { useTrainingStore } from '@/stores/trainingStore'
-import { generateTicketHTML } from '@/lib/pdfGenerator'
-import eventsData from '@/data/events.json'
+import { StatisticsPanel } from '../../components/training/StatisticsPanel'
+import { useCheckoutStore } from '../../stores/checkoutStore'
+import { useEventStore } from '../../stores/eventStore'
+import { useQueueStore } from '../../stores/queueStore'
+import { useTrainingStore } from '../../stores/trainingStore'
+import { generateTicketHTML } from '../../lib/pdfGenerator'
+import eventsData from '../../data/events.json'
 
 export default function SuccessPage() {
   const router = useRouter()
   const { order } = useCheckoutStore()
   const { selectedEvent } = useEventStore()
   const { position, startTime } = useQueueStore()
-  const { cartStore: cart } = useCartStore()
   const { reset: resetAll } = useTrainingStore()
   const [confetti, setConfetti] = useState<any[]>([])
 

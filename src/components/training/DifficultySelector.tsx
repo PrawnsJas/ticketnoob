@@ -1,8 +1,8 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { DifficultyMode } from '@/types'
-import { getDifficultyColor } from '@/lib/utils'
+import { DifficultyMode } from '../../types'
+import { getDifficultyColor } from '../../lib/utils'
 
 interface DifficultySelectorProps {
   selected: DifficultyMode | null

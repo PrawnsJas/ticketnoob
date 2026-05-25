@@ -2,8 +2,22 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Event } from '@/types'
-import { formatPrice, formatDate } from '@/lib/utils'
+import { formatPrice, formatDate } from '../../lib/utils'
+
+interface TicketTier {
+  available: number
+  price: number
+}
+
+interface Event {
+  id: string
+  artist: string
+  venue: string
+  date: string
+  currentSoldOut: boolean
+  totalCapacity: number
+  tiers: TicketTier[]
+}
 
 interface EventCardProps {
   event: Event

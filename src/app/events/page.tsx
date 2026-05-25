@@ -2,16 +2,16 @@
 
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
-import { Event } from '@/types'
-import { EventGrid } from '@/components/landing/EventGrid'
-import eventsData from '@/data/events.json'
+import { Event } from '../../types'
+import { EventGrid } from '../../components/landing/EventGrid'
+import eventsData from '../../data/events.json'
 
 export default function EventsPage() {
   const [events, setEvents] = useState<Event[]>([])
   const [filterSoldOut, setFilterSoldOut] = useState(false)
 
   useEffect(() => {
-    const filtered = filterSoldOut ? eventsData.filter((e) => !e.currentSoldOut) : eventsData
+    const filtered = (filterSoldOut ? eventsData.filter((e) => !e.currentSoldOut) : eventsData) as Event[]
     setEvents(filtered)
   }, [filterSoldOut])
 

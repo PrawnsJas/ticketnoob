@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useCountdown } from '@/hooks/useCountdown'
+import { useCountdown } from '../../hooks/useCountdown'
 
 interface CountdownTimerProps {
   initialSeconds: number

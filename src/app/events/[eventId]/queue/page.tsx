@@ -3,13 +3,13 @@
 import { useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { NetworkChecker } from '@/components/queue/NetworkChecker'
-import { PopupDetector } from '@/components/queue/PopupDetector'
-import { QueueWaitingRoom } from '@/components/queue/QueueWaitingRoom'
-import { useQueueStore } from '@/stores/queueStore'
-import { useTrainingStore } from '@/stores/trainingStore'
-import { useEventStore } from '@/stores/eventStore'
-import { generateQueuePosition } from '@/lib/queueAlgorithm'
+import { NetworkChecker } from '../../../../components/queue/NetworkChecker'
+import { PopupDetector } from '../../../../components/queue/PopupDetector'
+import { QueueWaitingRoom } from '../../../../components/queue/QueueWaitingRoom'
+import { useQueueStore } from '../../../../stores/queueStore'
+import { useTrainingStore } from '../../../../stores/trainingStore'
+import { useEventStore } from '../../../../stores/eventStore'
+import { generateQueuePosition } from '../../../../lib/queueAlgorithm'
 
 export default function QueuePage() {
   const params = useParams()

@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { DifficultyMode, TrainingStats } from '@/types'
+import { DifficultyMode, TrainingStats } from '../types'
 
 interface TrainingStoreState {
   difficulty: DifficultyMode

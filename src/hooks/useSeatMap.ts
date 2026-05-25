@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Seat, TicketTier } from '@/types'
-import { generateSeatsForVenue, simulateSeatDisappearance } from '@/lib/seatGenerator'
+import { Seat, TicketTier } from '../types'
+import { generateSeatsForVenue, simulateSeatDisappearance } from '../lib/seatGenerator'
 
 export function useSeatMap(venueId: string, tier: TicketTier, difficulty: string) {
   const [seats, setSeats] = useState<Seat[]>([])

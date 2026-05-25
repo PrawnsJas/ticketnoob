@@ -1,5 +1,5 @@
-import { QueuePosition } from '@/types'
-import trainingModesData from '@/data/trainingModes.json'
+import { QueuePosition } from '../types'
+import trainingModesData from '../data/trainingModes.json'
 
 export function generateQueuePosition(difficulty: string): QueuePosition {
   const modeData = trainingModesData.modes.find((m) => m.id === difficulty)

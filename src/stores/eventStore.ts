@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { Event, TicketTier } from '@/types'
+import { Event, TicketTier } from '../types'
 
 interface EventStoreState {
   selectedEvent: Event | null

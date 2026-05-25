@@ -1,12 +1,48 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { usePopupDetector } from '@/hooks/usePopupDetector'
-import { useState } from 'react'
-import { Modal } from '@/components/common/Modal'
+import { useState, useCallback } from 'react'
+import { Modal } from '../common/Modal'
 
 interface PopupDetectorProps {
   onPassed: () => void
+}
+
+function usePopupDetector() {
+  const [isBlocked, setIsBlocked] = useState<boolean | null>(null)
+  const [isChecking, setIsChecking] = useState(false)
+
+  const checkPopup = useCallback(() => {
+    setIsChecking(true)
+
+    if (typeof window === 'undefined') {
+      setTimeout(() => {
+        setIsBlocked(false)
+        setIsChecking(false)
+      }, 250)
+      return
+    }
+
+    const popup = window.open('', '_blank', 'width=100,height=100')
+    const finishCheck = (blocked: boolean) => {
+      if (popup && !popup.closed) {
+        popup.close()
+      }
+      setIsBlocked(blocked)
+      setIsChecking(false)
+    }
+
+    if (!popup) {
+      finishCheck(true)
+      return
+    }
+
+    setTimeout(() => {
+      finishCheck(popup.closed)
+    }, 250)
+  }, [])
+
+  return { isBlocked, isChecking, checkPopup }
 }
 
 export function PopupDetector({ onPassed }: PopupDetectorProps) {
