@@ -17,18 +17,19 @@ export default function SeatsPage() {
   const router = useRouter()
   const [selectedSeats, setSelectedSeats] = useState<Seat[]>([])
   const { selectedTier } = useEventStore()
-  const { setEventContext, setCartExpiry, addItem, setSeatSelectionStartTime } = useCartStore()
+  const { setEventContext, setCartExpiry, addItem, setSeatSelectionStartTime, reset } = useCartStore()
 
   const event = eventsData.find((e) => e.id === eventId)
   const tierInfo = event?.tiers.find((t) => t.id === selectedTier)
 
   useEffect(() => {
     if (event && selectedTier) {
+      reset()
       setEventContext(eventId, selectedTier)
       setSeatSelectionStartTime(Date.now())
       setCartExpiry(Date.now() + 300000)
     }
-  }, [event, selectedTier, eventId, setEventContext, setSeatSelectionStartTime, setCartExpiry])
+  }, [event, selectedTier, eventId, reset, setEventContext, setSeatSelectionStartTime, setCartExpiry])
 
   const handleProceedToCheckout = () => {
     if (selectedSeats.length === 0) return
@@ -79,7 +80,7 @@ export default function SeatsPage() {
             venueId={event.venueId}
             tier={selectedTier}
             difficulty="sale-day"
-            maxSeats={4}
+            maxSeats={6}
             onSeatsSelected={setSelectedSeats}
           />
         </div>

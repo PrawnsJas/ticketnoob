@@ -14,7 +14,7 @@ export function HeroSection() {
           className="mb-6"
         >
           <h1 className="text-6xl md:text-7xl font-black mb-4 bg-gradient-to-r from-[#FF006E] via-[#B500D9] to-[#00D9FF] bg-clip-text text-transparent">
-            TicketRush Trainer
+            TicketNoob
           </h1>
           <p className="text-2xl text-neon-cyan">
             Master the art of high-pressure ticket buying

@@ -42,19 +42,13 @@ export function PaymentMethods({ selected, onSelect }: PaymentMethodsProps) {
         ))}
       </div>
 
-      {selected && (
-        <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mt-6 space-y-4">
-          <input
-            type="text"
-            placeholder="Cardholder Name"
-            className="w-full px-4 py-2 bg-[#0a0a0f] border border-[#00D9FF] rounded text-white"
-          />
-          <div className="grid grid-cols-2 gap-4">
-            <input type="text" placeholder="MM/YY" className="px-4 py-2 bg-[#0a0a0f] border border-[#00D9FF] rounded text-white" />
-            <input type="text" placeholder="CVV" className="px-4 py-2 bg-[#0a0a0f] border border-[#00D9FF] rounded text-white" />
-          </div>
-        </motion.div>
-      )}
+      <div className="mt-6 rounded-lg border border-[#00D9FF] bg-[#08080f] p-4 text-sm text-gray-300">
+        {selected ? (
+          <p>Great choice. Enter your billing details and OTP to complete payment.</p>
+        ) : (
+          <p>Select a payment method before proceeding.</p>
+        )}
+      </div>
     </motion.div>
   )
 }

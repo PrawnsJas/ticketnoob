@@ -1,24 +1,34 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Modal } from '../common/Modal'
 
 interface OTPModalProps {
   isOpen: boolean
-  onConfirm: (otp: string) => void
+  onConfirm: () => void
   onClose: () => void
 }
 
 export function OTPModal({ isOpen, onConfirm, onClose }: OTPModalProps) {
   const [otp, setOtp] = useState('')
   const [fakeOtp] = useState(Math.random().toString().slice(2, 8))
+  const [error, setError] = useState('')
 
   const handleConfirm = () => {
-    if (otp.length === 6) {
-      onConfirm(otp)
-      setOtp('')
+    if (otp.length !== 6) {
+      setError('Enter the 6-digit OTP')
+      return
     }
+
+    if (otp !== fakeOtp) {
+      setError('Incorrect OTP, please try again')
+      return
+    }
+
+    setError('')
+    onConfirm()
+    setOtp('')
   }
 
   return (
@@ -37,10 +47,17 @@ export function OTPModal({ isOpen, onConfirm, onClose }: OTPModalProps) {
           type="text"
           maxLength={6}
           value={otp}
-          onChange={(e) => setOtp(e.target.value.replace(/\D/g, ''))}
+          onChange={(e) => {
+            setOtp(e.target.value.replace(/\D/g, ''))
+            if (error) setError('')
+          }}
           placeholder="000000"
-          className="w-full px-4 py-3 bg-[#0a0a0f] border-2 border-[#00D9FF] rounded text-center text-3xl font-mono text-white tracking-widest"
+          className={`w-full px-4 py-3 bg-[#0a0a0f] border-2 ${
+            error ? 'border-red-500' : 'border-[#00D9FF]'
+          } rounded text-center text-3xl font-mono text-white tracking-widest`}
         />
+
+        {error ? <p className="text-xs text-red-400 text-center">{error}</p> : null}
 
         <button
           onClick={handleConfirm}

@@ -15,7 +15,7 @@ export async function generateFakeTicketPDF(orderData: {
 
   doc.setTextColor(255, 0, 110)
   doc.setFontSize(28)
-  doc.text('TICKETRUSH TRAINER', 105, 30, { align: 'center' })
+  doc.text('TICKETNOOB', 105, 30, { align: 'center' })
 
   doc.setTextColor(0, 217, 255)
   doc.setFontSize(24)
@@ -81,7 +81,7 @@ export function generateTicketHTML(orderData: {
     </head>
     <body>
       <div class="ticket">
-        <h1>TICKETRUSH TRAINER</h1>
+        <h1>TICKETNOOB</h1>
         <div class="artist">${orderData.artist}</div>
         <div class="details">
           <div class="detail-row">

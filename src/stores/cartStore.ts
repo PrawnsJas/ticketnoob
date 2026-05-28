@@ -34,7 +34,9 @@ export const useCartStore = create<CartStoreState>((set, get) => ({
   seatSelectionStartTime: null,
 
   addItem: (item) => set((state) => ({
-    items: [...state.items, item],
+    items: state.items.some((existing) => existing.id === item.id)
+      ? state.items
+      : [...state.items, item],
   })),
 
   removeItem: (itemId) => set((state) => ({
